@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend Test</title>
+</head>
+<body>
+    <h1>Backend Connection Test</h1>
+    <button onclick="testBackend()">Test Backend</button>
+    <pre id="result"></pre>
+    
+    <script>
+    async function testBackend() {
+        const result = document.getElementById('result');
+        result.textContent = 'Testing...';
+        try {
+            const res = await fetch('http://127.0.0.1:8001/topics');
+            const data = await res.json();
+            result.textContent = 'SUCCESS!\n' + JSON.stringify(data, null, 2);
+        } catch (err) {
+            result.textContent = 'ERROR: ' + err.message;
+        }
+    }
+    // Auto-test on load
+    testBackend();
+    </script>
+</body>
+</html>

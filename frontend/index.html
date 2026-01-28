@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NyayLens — PIL Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>⚖️ NyayLens</h1>
+    <p class="subtitle">AI-Powered Public Interest Litigation Generator</p>
+
+    <div id="status" class="status">Ready. Click "Generate PIL".</div>
+
+    <div class="card">
+        <div class="row">
+            <div class="select-group">
+                <label for="dateFilter">Filter by Date:</label>
+                <input type="date" id="dateFilter" />
+            </div>
+            <div class="select-group">
+                <label for="topicSelect">Topic:</label>
+                <select id="topicSelect"></select>
+            </div>
+            <div class="select-group">
+                <label for="newsSelect">Choose an article:</label>
+                <select id="newsSelect"></select>
+            </div>
+            <button class="small" onclick="loadNews()">Refresh News</button>
+        </div>
+
+        <!-- Custom News Input Section -->
+        <div class="custom-news-section">
+            <h3>📝 Add Custom Article or Case Summary</h3>
+            <div id="customInputTabs" class="input-tabs">
+                <button class="input-tab-btn active" data-mode="url">From URL</button>
+                <button class="input-tab-btn" data-mode="text">Direct Text</button>
+            </div>
+            
+            <!-- URL Input Mode -->
+            <div id="urlMode" class="input-mode active">
+                <div class="row">
+                    <input type="text" id="customUrl" placeholder="Paste news article URL here..." />
+                    <input type="text" id="customTitle" placeholder="Optional title (auto-detected if empty)" />
+                    <button class="small secondary" onclick="addCustomNews()">Add Article</button>
+                </div>
+            </div>
+            
+            <!-- Direct Text Mode -->
+            <div id="textMode" class="input-mode">
+                <div class="text-input-form">
+                    <div class="form-group">
+                        <label for="customSummary">Case Summary (Required)</label>
+                        <textarea id="customSummary" placeholder="Brief summary of the case (10-8000 characters)" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customDetails">Full Details (Optional)</label>
+                        <textarea id="customDetails" placeholder="Detailed facts and context (max 12000 characters)" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="customArticleTitle">Title (Optional)</label>
+                            <input type="text" id="customArticleTitle" placeholder="e.g., Theft Case - Mobile Phone" />
+                        </div>
+                        <div class="form-group half">
+                            <label for="customSource">Source (Optional)</label>
+                            <input type="text" id="customSource" placeholder="e.g., Local News, Court Filing" />
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customTopics">Topics (comma-separated)</label>
+                        <input type="text" id="customTopics" placeholder="e.g., crime, theft, property" />
+                    </div>
+                    
+                    <button class="small secondary" onclick="submitCustomArticle()">Generate PIL from Text</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="newsTitle">Latest Issue</h2>
+
+        <div class="summary-box">
+            <strong>Summary:</strong>
+            <div id="summary" class="summary">—</div>
+        </div>
+
+        <div id="excerpt" class="excerpt">—</div>
+
+        <div class="elaborated-facts">
+            <h3>📋 Elaborated Facts & Context</h3>
+            <div id="elaboratedFacts" class="facts-box">—</div>
+        </div>
+
+        <div class="article-meta">
+            <span id="articleSource" style="font-size: 0.9em; color: #888;"></span>
+            <span id="articleDate" style="font-size: 0.9em; color: #888;"></span>
+        </div>
+
+        <div class="severity">
+            <span>Severity Score:</span>
+            <span id="severityScore">—</span>
+        </div>
+
+        <div class="priority">
+            <span>Priority:</span>
+            <span id="priorityLevel">—</span>
+        </div>
+
+        <div class="entities">
+            <h3>Detected Entities</h3>
+            <ul id="entityList"></ul>
+        </div>
+
+        <div class="button-group">
+            <button onclick="generatePIL()" class="primary-action">⚡ Generate PIL</button>
+            <button onclick="viewPil()" class="secondary">📋 View & Edit PIL</button>
+            <button onclick="console.log('Button clicked!'); showExplainability();" class="secondary">🤖 AI Reasoning</button>
+            <button onclick="downloadPDF()" class="tertiary">⬇️ Download PDF</button>
+        </div>
+    </div>
+</div>
+
+<!-- PIL Viewer Modal -->
+<div id="pilModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closePilModal()">&times;</span>
+        <h2>Preview & Edit PIL Document</h2>
+        
+        <div class="modal-tabs">
+            <button class="tab-button active" data-tab="preview">📄 Preview</button>
+            <button class="tab-button" data-tab="edit">✏️ Edit</button>
+            <button class="tab-button" data-tab="explainability">🤖 AI Analysis</button>
+        </div>
+        
+        <!-- Preview Tab -->
+        <div id="previewTab" class="tab-content active">
+            <div id="pilPreview" class="pil-preview"></div>
+            <div class="modal-actions">
+                <button class="secondary" onclick="switchTabUI('edit')">✏️ Edit Document</button>
+                <button onclick="downloadPilPdf()">⬇️ Download PDF</button>
+                <button class="tertiary" onclick="closePilModal()">✕ Close</button>
+            </div>
+        </div>
+        
+        <!-- Edit Tab -->
+        <div id="editTab" class="tab-content">
+            <form id="editForm">
+                <h3>Facts of the Case</h3>
+                <textarea id="editFacts" rows="6"></textarea>
+                
+                <h3>Fundamental Rights Violated</h3>
+                <textarea id="editRights" rows="4" placeholder="One per line (e.g., Article 21: Right to Life)"></textarea>
+                
+                <h3>Directive Principles of State Policy</h3>
+                <textarea id="editPrinciples" rows="4" placeholder="One per line"></textarea>
+                
+                <h3>Case Precedents</h3>
+                <textarea id="editCases" rows="4" placeholder="One per line"></textarea>
+                
+                <h3>Prayer for Relief</h3>
+                <textarea id="editPrayer" rows="6"></textarea>
+                
+                <div class="modal-actions">
+                    <button type="button" onclick="savePilEdits()">💾 Save Changes</button>
+                    <button type="button" class="secondary" onclick="switchTabUI('preview')">👁️ Preview Updated</button>
+                    <button type="button" class="tertiary" onclick="closePilModal()">✕ Cancel</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- AI Analysis Tab -->
+        <div id="explainabilityTab" class="tab-content">
+            <div id="explainabilityContent" class="explainability-box">
+                <h3>🤖 AI Decision Reasoning</h3>
+                <div id="severityAnalysis"></div>
+                <div id="entityAnalysis"></div>
+                <div id="legalAnalysis"></div>
+                <div id="pilViability"></div>
+            </div>
+            <div class="modal-actions">
+                <button class="tertiary" onclick="closePilModal()">✕ Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

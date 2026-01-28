@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>API Connectivity Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        const resultsDiv = document.getElementById('results');
+        
+        async function testAPI() {
+            const tests = [
+                { name: "Backend /news", url: "http://localhost:8001/news" },
+                { name: "Backend /health", url: "http://localhost:8001/health" },
+            ];
+            
+            for (const test of tests) {
+                try {
+                    const response = await fetch(test.url);
+                    const data = await response.json();
+                    resultsDiv.innerHTML += `<p>✅ ${test.name}: ${response.status}</p>`;
+                    console.log(test.name, data);
+                } catch (err) {
+                    resultsDiv.innerHTML += `<p>❌ ${test.name}: ${err.message}</p>`;
+                    console.error(test.name, err);
+                }
+            }
+        }
+        
+        testAPI();
+    </script>
+</body>
+</html>

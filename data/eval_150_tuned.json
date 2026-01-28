@@ -1,0 +1,547 @@
+{
+  "overall": {
+    "1": {
+      "hit@k": 0.3,
+      "avoid_neg@k": 1.0,
+      "samples": 150
+    },
+    "3": {
+      "hit@k": 0.3,
+      "avoid_neg@k": 1.0,
+      "samples": 150
+    },
+    "5": {
+      "hit@k": 0.3,
+      "avoid_neg@k": 1.0,
+      "samples": 150
+    }
+  },
+  "by_family": {
+    "kidnapping": {
+      "1": {
+        "hit@k": 1.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "3": {
+        "hit@k": 1.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "5": {
+        "hit@k": 1.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      }
+    },
+    "cheating forgery": {
+      "1": {
+        "hit@k": 0.3889,
+        "avoid_neg@k": 1.0,
+        "samples": 18
+      },
+      "3": {
+        "hit@k": 0.3889,
+        "avoid_neg@k": 1.0,
+        "samples": 18
+      },
+      "5": {
+        "hit@k": 0.3889,
+        "avoid_neg@k": 1.0,
+        "samples": 18
+      }
+    },
+    "assault hurt": {
+      "1": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "3": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "5": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      }
+    },
+    "rape": {
+      "1": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "3": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "5": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      }
+    },
+    "theft robbery": {
+      "1": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 18
+      },
+      "3": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 18
+      },
+      "5": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 18
+      }
+    },
+    "murder": {
+      "1": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "3": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "5": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      }
+    },
+    "dowry cruelty": {
+      "1": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "3": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "5": {
+        "hit@k": 0.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      }
+    },
+    "sexual deceit 69": {
+      "1": {
+        "hit@k": 1.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "3": {
+        "hit@k": 1.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      },
+      "5": {
+        "hit@k": 1.0,
+        "avoid_neg@k": 1.0,
+        "samples": 19
+      }
+    }
+  },
+  "sampled_details": [
+    {
+      "id": "ex-068",
+      "family": "kidnapping",
+      "true": [
+        "137"
+      ],
+      "negatives": [
+        "351",
+        "370"
+      ],
+      "pred": [
+        "137"
+      ]
+    },
+    {
+      "id": "ex-066",
+      "family": "kidnapping",
+      "true": [
+        "137"
+      ],
+      "negatives": [
+        "351",
+        "370"
+      ],
+      "pred": [
+        "137"
+      ]
+    },
+    {
+      "id": "ex-143",
+      "family": "cheating forgery",
+      "true": [
+        "320"
+      ],
+      "negatives": [
+        "370",
+        "69"
+      ],
+      "pred": [
+        "318"
+      ]
+    },
+    {
+      "id": "ex-100",
+      "family": "assault hurt",
+      "true": [
+        "353"
+      ],
+      "negatives": [
+        "100",
+        "370"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-002",
+      "family": "rape",
+      "true": [
+        "64"
+      ],
+      "negatives": [
+        "351",
+        "352",
+        "69"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-129",
+      "family": "theft robbery",
+      "true": [
+        "370"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-108",
+      "family": "assault hurt",
+      "true": [
+        "353"
+      ],
+      "negatives": [
+        "100",
+        "370"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-125",
+      "family": "theft robbery",
+      "true": [
+        "371"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-043",
+      "family": "murder",
+      "true": [
+        "100"
+      ],
+      "negatives": [
+        "102",
+        "351",
+        "352"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-092",
+      "family": "dowry cruelty",
+      "true": [
+        "86"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-097",
+      "family": "assault hurt",
+      "true": [
+        "351"
+      ],
+      "negatives": [
+        "100",
+        "370"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-132",
+      "family": "theft robbery",
+      "true": [
+        "370"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-138",
+      "family": "cheating forgery",
+      "true": [
+        "319"
+      ],
+      "negatives": [
+        "370",
+        "69"
+      ],
+      "pred": [
+        "318"
+      ]
+    },
+    {
+      "id": "ex-062",
+      "family": "kidnapping",
+      "true": [
+        "137"
+      ],
+      "negatives": [
+        "351",
+        "370"
+      ],
+      "pred": [
+        "137"
+      ]
+    },
+    {
+      "id": "ex-056",
+      "family": "murder",
+      "true": [
+        "100",
+        "101"
+      ],
+      "negatives": [
+        "102",
+        "351",
+        "352"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-134",
+      "family": "cheating forgery",
+      "true": [
+        "319"
+      ],
+      "negatives": [
+        "370",
+        "69"
+      ],
+      "pred": [
+        "318"
+      ]
+    },
+    {
+      "id": "ex-081",
+      "family": "dowry cruelty",
+      "true": [
+        "86"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-104",
+      "family": "assault hurt",
+      "true": [
+        "353"
+      ],
+      "negatives": [
+        "100",
+        "370"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-120",
+      "family": "theft robbery",
+      "true": [
+        "370"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-144",
+      "family": "cheating forgery",
+      "true": [
+        "318"
+      ],
+      "negatives": [
+        "370",
+        "69"
+      ],
+      "pred": [
+        "318"
+      ]
+    },
+    {
+      "id": "ex-116",
+      "family": "theft robbery",
+      "true": [
+        "371"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-042",
+      "family": "murder",
+      "true": [
+        "100",
+        "101"
+      ],
+      "negatives": [
+        "102",
+        "351",
+        "352"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-032",
+      "family": "sexual deceit 69",
+      "true": [
+        "69"
+      ],
+      "negatives": [
+        "318",
+        "320"
+      ],
+      "pred": [
+        "69"
+      ]
+    },
+    {
+      "id": "ex-091",
+      "family": "dowry cruelty",
+      "true": [
+        "86"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-135",
+      "family": "cheating forgery",
+      "true": [
+        "319"
+      ],
+      "negatives": [
+        "370",
+        "69"
+      ],
+      "pred": [
+        "318"
+      ]
+    },
+    {
+      "id": "ex-037",
+      "family": "sexual deceit 69",
+      "true": [
+        "69"
+      ],
+      "negatives": [
+        "318",
+        "320",
+        "64"
+      ],
+      "pred": [
+        "69"
+      ]
+    },
+    {
+      "id": "ex-004",
+      "family": "rape",
+      "true": [
+        "64",
+        "65"
+      ],
+      "negatives": [
+        "352",
+        "69"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-084",
+      "family": "dowry cruelty",
+      "true": [
+        "86"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-124",
+      "family": "theft robbery",
+      "true": [
+        "371"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    },
+    {
+      "id": "ex-078",
+      "family": "dowry cruelty",
+      "true": [
+        "86"
+      ],
+      "negatives": [
+        "318",
+        "351"
+      ],
+      "pred": []
+    }
+  ]
+}

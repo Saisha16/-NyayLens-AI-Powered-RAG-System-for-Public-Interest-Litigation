@@ -1,0 +1,20 @@
+IN THE HON’BLE HIGH COURT OF __________
+
+PUBLIC INTEREST LITIGATION
+
+Petitioner:
+A public-spirited citizen
+
+Respondents:
+State of __________ and relevant authorities
+
+Facts of the Case:
+{{FACTS}}
+
+Legal Grounds:
+{{LEGAL_GROUNDS}}
+
+Prayer:
+{{PRAYER}}
+
+Filed in public interest.
