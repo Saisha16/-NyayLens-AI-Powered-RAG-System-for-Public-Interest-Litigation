@@ -135,8 +135,8 @@ pip install -r requirements.txt
 uvicorn backend.api:app --reload
 ```
 ---
-##🚀 Usage Flow
-
+## 🚀 Usage Flow
+---
 1. **Input:** Submit a news URL or select a pre-configured RSS feed.
 2. **Extraction:** The system extracts and analyzes the article content.
 3. **Classification:** Relevant rights and legal domains are identified.
@@ -146,7 +146,7 @@ uvicorn backend.api:app --reload
 
 ---
 
-##🧪 Testing
+## 🧪 Testing
 
 To run the test suite, execute:
 
@@ -154,14 +154,14 @@ To run the test suite, execute:
 pytest
 ```
 ---
-##📌 Example Use Cases
+## 📌 Example Use Cases
 
 * **Legal Aid Organizations:** Streamlining the drafting of grievances for underserved communities.
 * **Law Students & Researchers:** Accelerating the process of linking news events to legal precedents.
 * **NGOs:** Efficiently monitoring and documenting large-scale public rights violations.
 * **Journalists & Civic-Tech Platforms:** Providing a direct bridge between investigative reporting and legal action.
 
-##🎯 What This Project Demonstrates
+## 🎯 What This Project Demonstrates
 
 * **End-to-End AI System Design:** A complete pipeline from raw data ingestion to structured document generation.
 * **Real-World NLP Application:** Practical implementation of Named Entity Recognition (NER), semantic search, and RAG for domain-specific tasks.
@@ -169,12 +169,12 @@ pytest
 * **Legal-Tech Domain Understanding:** Direct mapping of current events to Constitutional Articles, DPSPs, and Landmark Case Laws.
 * **Clean & Scalable Architecture:** A modular codebase built with industry-standard patterns, ensuring maintainability and ease of testing.
 
-##📜 Disclaimer
+## 📜 Disclaimer
 
 This project is for educational and research purposes only. Generated PIL drafts are preliminary templates and **must be reviewed by qualified legal professionals** before any formal use or filing.
 
 ---
 
-##👩‍💻 Author
+## 👩‍💻 Author
 
 **Isha Sahay** *AI / Full-Stack Developer* Focused on building real-world, impact-driven systems.
