@@ -77,6 +77,8 @@ NyayLens aims to **bridge the gap between news events and legal action** using A
 ## 📂 Project Structure
 
 ---
+```
+
 pil26/
 ├── backend/
 │   ├── main.py                      # FastAPI app with 13 endpoints
@@ -109,6 +111,7 @@ pil26/
 ├── requirements.txt
 └── .env.example                    
 ---
+```
 
 ---
 
