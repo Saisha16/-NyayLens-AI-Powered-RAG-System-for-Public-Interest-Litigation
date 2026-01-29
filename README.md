@@ -116,7 +116,7 @@ pil26/
 
 ## ⚙️ Installation & Setup
 ---
-### 1️⃣ Clone the Repository
+## 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/your-username/nyaylens.git
 cd nyaylens
@@ -135,7 +135,7 @@ pip install -r requirements.txt
 uvicorn backend.api:app --reload
 ```
 
-###🚀 Usage Flow
+##🚀 Usage Flow
 ---
 
 1. Submit a news URL or select an RSS feed
@@ -155,7 +155,7 @@ uvicorn backend.api:app --reload
 pytest
 ```
 
-###📌 Example Use Cases
+##📌 Example Use Cases
 ---
 - Legal aid organizations
 
@@ -165,7 +165,7 @@ pytest
 
 - Journalists & civic-tech platforms
 ---
-###🎯 What This Project Demonstrates
+##🎯 What This Project Demonstrates
 ---
 - End-to-end AI system design
 
@@ -178,6 +178,14 @@ pytest
 - Clean, modular, scalable architecture
 
 ---
-
-
-
+##📜 Disclaimer
+---
+This project is for educational and research purposes only.
+Generated PIL drafts must be reviewed by qualified legal professionals before use.
+---
+##👩‍💻 Author
+---
+Isha Sahay
+AI / Full-Stack Developer
+Focused on building real-world, impact-driven systems.
+---
