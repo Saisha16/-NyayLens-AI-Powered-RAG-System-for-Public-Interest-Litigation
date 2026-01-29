@@ -1,7 +1,7 @@
 # NyayLens - AI-Powered Public Interest Litigation Generator
 
 
-NyayLens is an end-to-end AI system that monitors public news sources, identifies potential public interest issues, maps them to constitutional rights and legal precedents, and generates structured **Public Interest Litigation (PIL) drafts** in a court-ready PDF format.
+>NyayLens is an end-to-end AI system that monitors public news sources, identifies potential public interest issues, maps them to constitutional rights and legal precedents, and generates structured **Public Interest Litigation (PIL) drafts** in a court-ready PDF format.
 
 This project focuses on **practical AI + system design**, not just models — combining NLP, semantic search, rule-based reasoning, and document generation.
 
