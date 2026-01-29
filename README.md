@@ -58,7 +58,7 @@ NyayLens aims to **bridge the gap between news events and legal action** using A
 ---
 
 ## 🧠 Technology Stack
-
+---
 | Component | Technology | Purpose |
 |----------|-----------|---------|
 | Backend API | FastAPI | Core application & API layer |
@@ -77,7 +77,7 @@ NyayLens aims to **bridge the gap between news events and legal action** using A
 
 ## 📂 Project Structure
 
-```
+---
 pil26/
 ├── backend/
 │   ├── main.py                      # FastAPI app with 13 endpoints
@@ -109,15 +109,15 @@ pil26/
 │   └── db.sqlite
 ├── requirements.txt
 └── .env.example                    
-```
+---
 
 ---
 
 ## ⚙️ Installation & Setup
-
+---
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/your-username/nyaylens.git
 cd nyaylens
 
-
+---
